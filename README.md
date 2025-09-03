@@ -44,9 +44,7 @@ _(more cool stuff on the way…)_
 
 ## 😂 Random Dev Meme of the Day
 
-<!-- meme:start -->
-
-![Random Dev Meme](https://i.imgur.com/6X4Qq1T.jpeg)
+![meme](./assets/meme.png)
 
 <!-- meme:end -->
 
