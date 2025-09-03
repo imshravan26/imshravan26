@@ -25,11 +25,13 @@
 
 ---
 
-## 🏙️ My GitHub Skyline
+## 🏙️ Snake
 
-[![GitHub Skyline](./assets/skyline.gif)](https://skyline.github.com/imshravan26)
+<div align="center">
+  <img src="https://raw.githubusercontent.com/imshravan26/imshravan26/output/snake.svg" alt="Snake animation" />
+</div>
 
-> 3D city of my code contributions 🌆
+>
 
 ---
 
