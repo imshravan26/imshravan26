@@ -3,7 +3,7 @@ name: Test Meme Update
 on:
   workflow_dispatch: # Manual trigger only
   push:
-    branches: [ main ]
+    branches: [main]
     paths:
       - ".github/workflows/test-meme.yml"
 
@@ -14,7 +14,7 @@ permissions:
 jobs:
   test-meme:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
