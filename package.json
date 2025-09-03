@@ -6,6 +6,9 @@
   "scripts": {
     "update-meme": "node scripts/update_meme.js",
     "generate-rocket": "node scripts/generate_rocket_svg.js",
+    "generate-interactive-rocket": "node scripts/generate_interactive_rocket.js",
+    "generate-advanced-rocket": "node scripts/generate_advanced_rocket.js",
+    "fetch-github-data": "node scripts/fetch_github_data.js",
     "test-meme": "node scripts/test-meme-generator.js",
     "manual-update": "node scripts/manual-update.js",
     "meme": "node scripts/manual-update.js"

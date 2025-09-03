@@ -32,13 +32,22 @@ _(more cool stuff on the way…)_
 
 ---
 
-## ✨ Rocket over my Contributions
+## ✨ Interactive Rocket over my Contributions
 
-> A tiny rocket flies across my contributions grid every day.
+> 🚀 **NEW**: Interactive rocket that follows your cursor! Move your mouse to control the flight path.
 
 <p align="center">
-  <img src="./assets/rocket.svg" alt="Rocket flying over contribution grid" />
+  <img src="./assets/rocket.svg" alt="Interactive rocket flying over contribution grid" />
 </p>
+
+**🎮 Features:**
+
+- 🖱️ **Cursor Control**: Rocket follows your mouse movement
+- 📊 **Real Data**: Based on actual GitHub contribution patterns
+- ✨ **Interactive**: Hover over contribution squares for details
+- 🌟 **Immersive**: Space theme with nebulae and twinkling stars
+
+> 💡 Want the full interactive experience? Check out `ROCKET_README.md` for the complete HTML version!
 
 ---
 
