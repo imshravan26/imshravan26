@@ -5,6 +5,7 @@
   "main": "scripts/update_meme.js",
   "scripts": {
     "update-meme": "node scripts/update_meme.js",
+    "test-meme-sources": "node scripts/test_meme_sources.js",
     "generate-rocket": "node scripts/generate_rocket_svg.js",
     "generate-interactive-rocket": "node scripts/generate_interactive_rocket.js",
     "generate-advanced-rocket": "node scripts/generate_advanced_rocket.js",
