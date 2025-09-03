@@ -30,7 +30,7 @@
 ## 🐍 Watch my contributions get eaten by a snake
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/imshravan26/imshravan26/output/snake.svg" alt="Snake animation" />
+  <img src="https://raw.githubusercontent.com/imshravan26/imshravan26/output/snake.gif" alt="Snake animation" />
 </p>
 
 >
