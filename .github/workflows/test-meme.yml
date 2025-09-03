@@ -1,23 +1,20 @@
-name: Update Daily Programming Meme
+name: Test Meme Update
 
 on:
-  schedule:
-    # Run daily at 9:00 AM UTC (adjust timezone as needed)
-    - cron: "0 9 * * *"
-  workflow_dispatch: # Allow manual trigger
+  workflow_dispatch: # Manual trigger only
   push:
+    branches: [ main ]
     paths:
-      - "scripts/update_meme.js"
-      - ".github/workflows/update-meme.yml"
+      - ".github/workflows/test-meme.yml"
 
 permissions:
   contents: write
   actions: read
 
 jobs:
-  update-meme:
+  test-meme:
     runs-on: ubuntu-latest
-
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -35,30 +32,39 @@ jobs:
           echo "Directory contents:"
           ls -la
           echo "Scripts directory:"
-          ls -la scripts/
-          echo "Node version: $(node --version)"
-          echo "NPM version: $(npm --version)"
+          ls -la scripts/ || echo "Scripts directory not found"
+          echo "Workflow directory:"
+          ls -la .github/workflows/ || echo "Workflow directory not found"
 
-      - name: Run meme generator
+      - name: Test meme generator
         env:
           RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
         run: |
-          node scripts/update_meme.js
+          echo "Testing meme generator..."
+          node scripts/update_meme.js || echo "Meme generator failed"
+
+      - name: Check git status
+        run: |
+          echo "Git status:"
+          git status
+          echo "Git log (last 3 commits):"
+          git log --oneline -3
 
       - name: Check if files changed
         id: verify-changed-files
         run: |
           if [ -n "$(git status --porcelain)" ]; then
             echo "changed=true" >> $GITHUB_OUTPUT
+            echo "Files changed:"
+            git status --porcelain
           else
             echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No files changed"
           fi
 
-      - name: Commit and push changes
+      - name: Test commit (dry run)
         if: steps.verify-changed-files.outputs.changed == 'true'
         run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add assets/meme.png README.md
-          git commit -m "🎭 Daily meme update - $(date +'%Y-%m-%d')"
-          git push
+          echo "Would commit these changes:"
+          git diff --name-only
+          echo "Test successful - not actually committing"
