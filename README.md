@@ -64,7 +64,3 @@ _(more cool stuff on the way…)_
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/shravan-chaudhari-91699a1b6/)  
 [![Twitter](https://img.shields.io/badge/Twitter-black?style=for-the-badge&logo=x)](https://x.com/shravn__)
-
-```
-
-```

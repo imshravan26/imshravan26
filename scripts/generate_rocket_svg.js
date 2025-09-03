@@ -1,91 +1,100 @@
 import fs from "fs";
 
-const USERNAME = "imshravan26";
+const USERNAME = process.env.GH_LOGIN || "imshravan26";
 const OUT_PATH = "assets/rocket.svg";
 
-async function fetchContributions(username) {
-  // Mock contribution data for demonstration
-  // In a real implementation, you would fetch this from GitHub API
-  const contributions = [];
-  const today = new Date();
-  const startDate = new Date(today);
-  startDate.setMonth(startDate.getMonth() - 12);
+async function fetchContributions(login) {
+  const query = `
+    query($login: String!) {
+      user(login: $login) {
+        contributionsCollection {
+          contributionCalendar {
+            totalContributions
+            weeks { contributionDays { date contributionCount color } }
+          }
+        }
+      }
+    }
+  `;
 
-  for (let d = new Date(startDate); d <= today; d.setDate(d.getDate() + 1)) {
-    contributions.push({
-      date: d.toISOString().split("T")[0],
-      count: Math.floor(Math.random() * 10),
-    });
+  const res = await fetch("https://api.github.com/graphql", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
+    },
+    body: JSON.stringify({ query, variables: { login } }),
+  });
+
+  if (!res.ok) {
+    const t = await res.text();
+    throw new Error(`GraphQL failed: ${res.status} ${t}`);
   }
-
-  return contributions;
+  const json = await res.json();
+  const weeks =
+    json.data.user.contributionsCollection.contributionCalendar.weeks;
+  return weeks.map((w) => w.contributionDays).flat();
 }
 
 function buildSVG(days) {
-  const width = 800;
-  const height = 200;
-  const cols = 53; // weeks in a year
-  const rows = 7; // days in a week
-  const cellSize = 10;
-  const cellGap = 2;
-  const offsetX = 50;
-  const offsetY = 50;
+  // Layout constants
+  const cell = 12; // size of each day cell
+  const gap = 3; // gap between cells
+  const weeks = Math.ceil(days.length / 7);
+  const cols = weeks;
+  const rows = 7;
+  const width = cols * (cell + gap) + gap;
+  const height = rows * (cell + gap) + gap + 40; // extra for title
 
-  // Build contribution squares
+  // Build grid rects (7 rows x N columns)
   let rects = "";
-  days.forEach((day, index) => {
-    const col = Math.floor(index / rows);
-    const row = index % rows;
-    const x = offsetX + col * (cellSize + cellGap);
-    const y = offsetY + row * (cellSize + cellGap);
-    const opacity = Math.min(1, day.count / 10);
-    const color = day.count > 0 ? `rgba(34, 197, 94, ${opacity})` : "#1f2937";
-
-    rects += `<rect x="${x}" y="${y}" width="${cellSize}" height="${cellSize}" fill="${color}" rx="2"/>`;
-  });
-
-  // Create flight path
-  const pathPoints = [
-    [50, height - 50],
-    [width / 4, 80],
-    [width / 2, height - 30],
-    [(3 * width) / 4, 60],
-    [width - 50, height - 40],
-  ];
-
-  let path = `M ${pathPoints[0][0]} ${pathPoints[0][1]}`;
-  for (let i = 1; i < pathPoints.length; i++) {
-    const cp1x =
-      pathPoints[i - 1][0] + (pathPoints[i][0] - pathPoints[i - 1][0]) / 3;
-    const cp1y = pathPoints[i - 1][1];
-    const cp2x =
-      pathPoints[i][0] - (pathPoints[i][0] - pathPoints[i - 1][0]) / 3;
-    const cp2y = pathPoints[i][1];
-    path += ` C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${pathPoints[i][0]} ${pathPoints[i][1]}`;
+  for (let c = 0; c < cols; c++) {
+    for (let r = 0; r < rows; r++) {
+      const idx = c * rows + r;
+      if (idx >= days.length) continue;
+      const d = days[idx];
+      const x = gap + c * (cell + gap);
+      const y = gap + r * (cell + gap) + 30; // push down under title
+      const radius = 3;
+      const color = d.contributionCount > 0 ? d.color : "#e5e7eb"; // light gray fallback
+      rects += `<rect x="${x}" y="${y}" rx="${radius}" ry="${radius}" width="${cell}" height="${cell}" fill="${color}"/>\n`;
+    }
   }
 
-  // Rocket SVG
+  // Build a smooth path across the grid (rocket flies left->right with gentle wave)
+  const pathY = height / 2;
+  const path = `M 10 ${pathY} C ${width * 0.25} ${pathY - 40}, ${
+    width * 0.75
+  } ${pathY + 40}, ${width - 10} ${pathY}`;
+
+  // Simple rocket SVG (emoji-like)
   const rocket = `
-  <g id="rocket">
-    <g transform="translate(-12, -12)">
-      <polygon points="12,0 16,8 12,6 8,8" fill="#EF4444"/>
-      <rect x="10" y="6" width="4" height="10" fill="#F3F4F6"/>
-      <polygon points="8,16 10,20 12,16 14,20 16,16 14,16 10,16" fill="#F59E0B">
-        <animate attributeName="opacity" values="1;0.4;1" dur="0.5s" repeatCount="indefinite" />
-      </polygon>
+    <g id="rocket" transform="scale(0.8)">
+      <g>
+        <ellipse cx="0" cy="0" rx="10" ry="6" fill="#9CA3AF"/>
+        <polygon points="10,0 20,4 20,-4" fill="#F87171"/>
+        <polygon points="-8,0 -16,6 -8,4" fill="#60A5FA"/>
+        <polygon points="-8,0 -16,-6 -8,-4" fill="#60A5FA"/>
+        <circle cx="-2" cy="0" r="2.2" fill="#111827"/>
+        <circle cx="-2" cy="0" r="1.2" fill="#93C5FD"/>
+      </g>
+      <g id="flame">
+        <polygon points="-18,0 -26,3 -26,-3" fill="#F59E0B">
+          <animate attributeName="opacity" values="1;0.4;1" dur="0.5s" repeatCount="indefinite" />
+        </polygon>
+      </g>
     </g>
-  </g>
   `;
 
   // Animate the rocket along path
   const motion = `
-  <path id="fly" d="${path}" fill="none" stroke="none"/>
-  <g>
-    ${rocket}
-    <animateMotion dur="12s" repeatCount="indefinite" rotate="auto">
-      <mpath href="#fly" />
-    </animateMotion>
-  </g>
+    <path id="fly" d="${path}" fill="none" stroke="none"/>
+    <g>
+      ${rocket}
+      <animateMotion dur="12s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#fly" />
+      </animateMotion>
+    </g>
   `;
 
   const title = `<text x="${

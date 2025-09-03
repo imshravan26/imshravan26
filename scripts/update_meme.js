@@ -21,11 +21,11 @@ function pickToday() {
 
 function updateReadme(url) {
   const path = "README.md";
-  const start = "<!-- meme start -->";
-  const end = "<!-- meme end -->";
+  const start = "<!-- meme:start -->";
+  const end = "<!-- meme:end -->";
   const md = fs.readFileSync(path, "utf8");
-  const pattern = new RegExp(`${start}[\\s\\S]*?${end}`);
-  const block = `${start}\n\n![Random Dev Meme](${url})\n\n${end}`;
+  const pattern = new RegExp(`${start}[\s\S]*?${end}`);
+  const block = `${start}\n![Random Dev Meme](${url})\n${end}`;
   const next = md.replace(pattern, block);
   if (next !== md) {
     fs.writeFileSync(path, next, "utf8");
