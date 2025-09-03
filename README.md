@@ -32,6 +32,26 @@ _(more cool stuff on the way…)_
 
 ---
 
+## ✨ Rocket over my Contributions
+
+> A tiny rocket flies across my contributions grid every day.
+
+<p align="center">
+  <img src="./assets/rocket.svg" alt="Rocket flying over contribution grid" />
+</p>
+
+---
+
+## 😂 Random Dev Meme of the Day
+
+<!-- meme:start -->
+
+![Random Dev Meme](https://i.imgur.com/6X4Qq1T.jpeg)
+
+<!-- meme:end -->
+
+---
+
 ## 🎯 Current Focus
 
 - Mastering **Next.js + Node.js** with scalable projects
@@ -40,17 +60,11 @@ _(more cool stuff on the way…)_
 
 ---
 
-## 😂 Random Dev Meme of the Day
-
-<!-- meme start -->
-
-![Random Dev Meme](https://i.redd.it/q1z9z3q7j2x61.jpg)
-
-<!-- meme end -->
-
----
-
 ## 🌐 Connect with Me
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/shravan-chaudhari-91699a1b6/)  
-[![X](https://img.shields.io/badge/Twitter-black?style=for-the-badge&logo=x)](https://x.com/shravn__)
+[![Twitter](https://img.shields.io/badge/Twitter-black?style=for-the-badge&logo=x)](https://x.com/shravn__)
+
+```
+
+```
