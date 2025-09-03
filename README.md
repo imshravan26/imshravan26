@@ -1,8 +1,6 @@
-# Hey, I'm Shravan 👋
-
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=1000&color=0FF7FF&center=true&vCenter=true&width=700&lines=Hey%2C+I'm+Shravan+👋;🚀+20+y%2Fo+Software+Engineer;Full-stack+Web+Dev+%7C+Builder;Next.js+%7C+Node.js+%7C+TypeScript;Dreaming+big+%26+shipping+fast+%F0%9F%9A%80" alt="Typing Animation" />
-</p>
+<h1 align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=1000&color=0FF7FF&center=true&vCenter=true&width=700&lines=Hey%2C+I'm+Shravan+👋;🚀Dreaming+big+%26+shipping+fast+%F0%9F%9A%80" alt="Typing Animation" />
+</h1>
 
 🚀 20 y/o Software Engineer | Full-stack Web Dev  
 💻 I build apps with **Next.js, Node.js, TypeScript, JavaScript**  
@@ -32,13 +30,6 @@
 [![GitHub Skyline](./assets/skyline.gif)](https://skyline.github.com/imshravan26)
 
 > 3D city of my code contributions 🌆
-
-**🎮 Features:**
-
-- ⌨️ **Controls**: Press SPACE to jump, ENTER to restart after game over
-- 🐞 **Obstacles**: Dodge bugs and survive as long as possible
-- 📈 **Scoring**: Higher score = more commits collected
-- 🚀 **Hosted on GitHub Pages**: [Play Here](https://imshravan26.github.io/shravan-runner/)
 
 ---
 
