@@ -1,0 +1,102 @@
+{
+  "memeConfig": {
+    "categories": [
+      "programming",
+      "debugging",
+      "frontend",
+      "backend",
+      "devops",
+      "javascript",
+      "python",
+      "general"
+    ],
+    "fallbackJokes": [
+      {
+        "text": "// TODO: Fix this later\n// (6 months later)\n// TODO: Still fix this",
+        "category": "programming"
+      },
+      {
+        "text": "99 little bugs in the code\n99 little bugs\nTake one down, patch it around\n117 little bugs in the code",
+        "category": "debugging"
+      },
+      {
+        "text": "Works on my machine ¯\\_(ツ)_/¯",
+        "category": "general"
+      },
+      {
+        "text": "It's not a bug, it's a feature!",
+        "category": "general"
+      },
+      {
+        "text": "Real programmers count from 0",
+        "category": "programming"
+      },
+      {
+        "text": "There are only 10 types of people:\nThose who understand binary\nand those who don't",
+        "category": "programming"
+      },
+      {
+        "text": "Programmer (noun):\nAn organism that turns\ncoffee into code",
+        "category": "general"
+      },
+      {
+        "text": "Why do programmers prefer dark mode?\nBecause light attracts bugs!",
+        "category": "programming"
+      },
+      {
+        "text": "How many programmers does it take\nto change a light bulb?\nNone, that's a hardware problem",
+        "category": "general"
+      },
+      {
+        "text": "CSS is awesome!\n*Spends 3 hours centering a div*",
+        "category": "frontend"
+      },
+      {
+        "text": "My code doesn't always work...\nBut when it does, I have no idea why",
+        "category": "debugging"
+      },
+      {
+        "text": "Coding is 10% writing code\nand 90% figuring out why it doesn't work",
+        "category": "debugging"
+      },
+      {
+        "text": "Stack Overflow: Copy and paste\nMy brain: Am I a joke to you?",
+        "category": "programming"
+      },
+      {
+        "text": "When you're pair programming\nbut you're both stuck:",
+        "category": "programming"
+      },
+      {
+        "text": "Me: I'll just make a quick fix\nAlso me: *Refactors entire codebase*",
+        "category": "programming"
+      },
+      {
+        "text": "PRODUCTION: Everything is on fire\nDEVELOPMENT: This is fine",
+        "category": "devops"
+      },
+      {
+        "text": "When the junior dev asks\n'Why don't we just rewrite everything?'",
+        "category": "programming"
+      },
+      {
+        "text": "Git commit -m 'Fix'\nGit commit -m 'Actually fix'\nGit commit -m 'Fix fix'",
+        "category": "programming"
+      },
+      {
+        "text": "When you find the solution\non page 10 of Google results:",
+        "category": "programming"
+      },
+      {
+        "text": "Me explaining my variable names\nto future me:",
+        "category": "programming"
+      }
+    ],
+    "preferences": {
+      "imageFormat": "png",
+      "maxRetries": 3,
+      "timeout": 10000,
+      "updateFrequency": "daily"
+    }
+  }
+}

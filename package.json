@@ -1,0 +1,26 @@
+{
+  "name": "github-profile-meme-generator",
+  "version": "1.0.0",
+  "description": "Random programming meme generator for GitHub profile README",
+  "main": "scripts/update_meme.js",
+  "scripts": {
+    "update-meme": "node scripts/update_meme.js",
+    "generate-rocket": "node scripts/generate_rocket_svg.js",
+    "test-meme": "node scripts/test-meme-generator.js",
+    "manual-update": "node scripts/manual-update.js",
+    "meme": "node scripts/manual-update.js"
+  },
+  "keywords": [
+    "github",
+    "profile",
+    "meme",
+    "programming",
+    "automation"
+  ],
+  "author": "Shravan Chaudhari",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imshravan26/imshravan26.git"
+  }
+}
