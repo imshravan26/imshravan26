@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=1000&color=0FF7FF&center=true&vCenter=true&width=700&lines=Hey%2C+I'm+Shravan+👋;🚀Dreaming+big+%26+shipping+fast+%F0%9F%9A%80" alt="Typing Animation" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=1000&color=ffffff&center=true&vCenter=true&width=700&lines=Hey%2C+I'm+Shravan+👋;🚀Dreaming+big+%26+shipping+fast+%F0%9F%9A%80" alt="Typing Animation" />
 </h1>
 
 🚀 20 y/o Software Engineer | Full-stack Web Dev  
@@ -52,4 +52,4 @@
 ## 🌐 Connect with Me
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/shravan-chaudhari-91699a1b6/)  
-[![Twitter](https://img.shields.io/badge/Twitter-black?style=for-the-badge&logo=x)](https://x.com/shravn--)
+[![Twitter](https://img.shields.io/badge/Twitter-black?style=for-the-badge&logo=x)](https://x.com/shravn__)
