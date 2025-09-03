@@ -16,15 +16,6 @@
 
 ---
 
-## 🚀 Featured Projects
-
-- 🎮 **[Bliss](#)** – A gamified social platform to enhance social & creative skills
-- 🧠 **[Recru.it](#)** – AI-powered recruitment & career management platform
-- 🎥 **[StreamIt](#)** – A YouTube-like full-stack video platform (in progress)
-- ✍️ **[UpBlog](#)** – SaaS platform for creators & businesses to publish blogs
-
-_(more cool stuff on the way…)_
-
 ---
 
 ## 📊 GitHub Stats
