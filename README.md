@@ -27,15 +27,11 @@
 
 ---
 
-## 🎮 Play Shravan Runner
+## 🏙️ My GitHub Skyline
 
-> 🏃‍♂️ **NEW**: An endless runner game where Shravan dodges bugs & deadlines while collecting commits!
+[![GitHub Skyline](./assets/skyline.gif)](https://skyline.github.com/imshravan26)
 
-<p align="center">
-  <a href="https://imshravan26.github.io/shravan-runner/" target="_blank">
-    <img src="./assets/shravan-runner-preview.gif" alt="Shravan Runner Game Preview" width="600" />
-  </a>
-</p>
+> 3D city of my code contributions 🌆
 
 **🎮 Features:**
 
