@@ -54,7 +54,7 @@ Take one down, patch it around
 
 ## 🎯 Current Focus
 
-- Mastering **Next.js + Node.js** with scalable projects
+- Mastering **Software Development** with scalable projects
 - Exploring **AI + agentic systems**
 - Building SaaS products that actually solve problems
 
