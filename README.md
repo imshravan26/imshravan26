@@ -2,7 +2,7 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=1000&color=ffffff&center=true&vCenter=true&width=700&lines=Hey%2C+I'm+Shravan+👋;🚀Dreaming+big+%26+shipping+fast+%F0%9F%9A%80" alt="Typing Animation" />
 </h1>
 
-🚀 20 y/o Software Engineer | Full-stack Web Dev  
+🚀 21 y/o Software Engineer | Full-stack Web Dev  
 💻 I build apps with **Next.js, Node.js, TypeScript, JavaScript**  
 🌍 Dreaming big & working towards remote dev opportunities
 
